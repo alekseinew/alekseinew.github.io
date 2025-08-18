@@ -12,7 +12,6 @@
             background-color: #f5f5f5;
             color: #333;
         }
-
         .container {
             max-width: 900px;
             margin: 20px auto;
@@ -20,7 +19,6 @@
             padding: 20px 40px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         .header {
             display: flex;
             align-items: center;
@@ -28,7 +26,12 @@
             padding-bottom: 20px;
             margin-bottom: 20px;
         }
-
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1; /* чтобы занимало всё оставшееся место */
+        }
         .header img {
             width: 120px;
             height: 120px;
@@ -85,6 +88,28 @@
             font-size: 14px;
             color: #777;
         }
+        .download-btn {
+            padding: 8px 16px;
+            background: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background: #005bb5;
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+            body {
+                background: #fff;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,10 +117,13 @@
     <!-- Header -->
     <div class="header">
         <img src="logo.png" alt="Oleksii Andrukhanenko">
-        <div class="info">
-            <h1>Oleksii Andrukhanenko</h1>
-            <p>Backend Developer (PHP/Go)</p>
-            <p>Email: alekseiandrukhanenko@gmail.com | Telegram: @Aleksei_qw</p>
+        <div class="header-content">
+            <div class="info">
+                <h1>Oleksii Andrukhanenko</h1>
+                <p>Backend Developer (PHP/Go)</p>
+                <p>Email: alekseiandrukhanenko@gmail.com | Telegram: @Aleksei_qw</p>
+            </div>
+            <button class="download-btn" onclick="window.print()">⬇ Download PDF</button>
         </div>
     </div>
 
@@ -116,18 +144,22 @@
         <li>ne4j</li>
         <li>RabbitMQ</li>
         <li>Sentry</li>
-        <li>CQRS</li>
-        <li>Command Bus</li>
         <li>AWS S3</li>
         <li>AWS SQS</li>
         <li>AWS lambda</li>
         <li>CI/CD (Github Actions)</li>
         <li>Socket.io</li>
+        <li>JWT</li>
+        <li>OAuth2</li>
         <li>Phpunit</li>
         <li>Codeception</li>
         <li>unit, functional, integration testing</li>
-        <li>JWT</li>
-        <li>OAuth2</li>
+        <li>CQRS</li>
+        <li>Command Bus</li>
+        <li>Event sourcing</li>
+        <li>Jira</li>
+        <li>SCRUM</li>
+        <li>Kanban</li>
         <li>SOLID</li>
         <li>KISS</li>
         <li>microservices</li>
